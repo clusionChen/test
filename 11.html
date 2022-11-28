@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <textarea id="txt" style="width:100%;height:300px;"></textarea>
+   <div><button type="button" onclick="res()">过滤没有出现人员</button></div>
+    <textarea id="txt2" style="width:100%;height:300px;"></textarea>
+</body>
+<script>
+    var plople =[ '梁宸睿','于洺钰','温麒静','周子明','兰晓熹','梁子睿','陈晓一','黄伟轩','朱灏','陈子皓','廖麒','周佳慧','柳筠蓝','陈彦其','宋秉城','叶骐贤','韦胜楼','许倚晨','翁皓勋','蔡玮桐','黄暄迪','张毅轩','岑振鑫','肖镇杰','张芸溪','高伟琛','王紫琪','洪嘉杰','黄济济','胡雯珺','邵梦允','翁梓晴','朱炫宇','翟芷晴','王美萱','何韵琪','余欣妍','张怡敏','彭曼','谭力诚','梁钰茜','胡泽楷','林梓萱','梁钰婷','谭欢','江芷琳','李欣妍','黄麟淇']
+
+    window.onload=function(){
+        //获取拖拽实验对象
+       
+    }
+    function res() {
+        var not_list = [];
+        var text = document.getElementById("txt").value;
+        for (var i = 0; i < plople.length; i++) {
+            if (text.indexOf(plople[i]) == -1) {
+                not_list.push(plople[i]);
+            }
+        }
+        document.getElementById("txt2").value = not_list.join(',');
+       
+    }
+ 
+
+</script>
+</html>
